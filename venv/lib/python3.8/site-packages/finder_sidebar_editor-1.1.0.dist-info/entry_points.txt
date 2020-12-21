@@ -1,0 +1,3 @@
+[console_scripts]
+finder_sidebar_editor = finder_sidebar_editor.__main__:main
+
