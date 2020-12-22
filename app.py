@@ -17,6 +17,8 @@ class SortiumApp(object):
         self.fav_button = rumps.MenuItem(title=self.config["favorite"], callback=self.add_rem_favbar)
         self.settings_button = rumps.MenuItem(title=self.config["settings"], callback=self.settings)
         self.app.menu = [self.sort_button, self.fav_button]
+        func = Functions
+        func.createdir(self, func.sortpath)
 
     def set_up_menu(self):
         self.app.title = "🔘"
@@ -30,10 +32,10 @@ class SortiumApp(object):
     def add_rem_favbar(self, sender):
         func = Functions()
         if sender.title == self.config["favorite"]:
-            func.add_sideBar()
+            func.add_sidebar()
             sender.title = self.config["unfavorite"]
         else:
-            func.rem_sideBar()
+            func.rem_sidebar()
             sender.title = self.config["favorite"]
 
     def settings(self, sender):
