@@ -14,35 +14,27 @@ class Functions:
     home = expanduser("~")
     sortpath = home + '/Sortium'
 
+    photo_ext = \
+        '*.gif', \
+        '*.png', \
+        '*.jpg'
+
+    docum_ext = \
+        '*.txt', \
+        '*.docx', \
+        '*.pdf'
+
     # photos destination
     photo_dest = home + '/Pictures'
     docum_dest = home + '/Documents'
 
-    # array of destinations
+    def moveit(self, sortpath, extension, destination):
+        all_files = []
+        for ext in extension:
+            all_files.extend(glob(join(sortpath, ext)))
 
-    photo_files = []
-    for ext in ('*.gif', '*.png', '*.jpg'):
-        photo_files.extend(glob(join(sortpath, ext)))
-
-    docum_files = []
-    for ext in ('*.txt', '*.docx', '*.pdf'):
-        docum_files.extend(glob(join(sortpath, ext)))
-
-    file_type = \
-        [docum_files,
-         photo_files]
-
-    file_destination = \
-        [docum_dest,
-         photo_dest]
-
-    def sort(self, file_type, file_destination):
-
-        for types, file_destination in zip(file_type, file_destination):
-            for list in types:
-                for files in glob.glob(list):
-                    print(files)
-                    #shutil.move(files, file_destination)
+        for sort_files in all_files:
+            shutil.move(sort_files, destination)
 
     def add_sidebar(self):
         sidebar = FinderSidebar()
@@ -61,10 +53,3 @@ class Functions:
             os.makedirs(sortpath)
         else:
             print(sortpath + ' exists')
-
-
-func = Functions
-
-
-print(func.file_type)
-print(func.file_destination)
