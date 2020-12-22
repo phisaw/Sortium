@@ -3,7 +3,6 @@ from finder_sidebar_editor import FinderSidebar
 from os.path import expanduser
 import shutil
 import glob
-import tkinter
 import os
 from glob import glob
 
@@ -17,11 +16,19 @@ class Functions:
     photo_ext = \
         '*.gif', \
         '*.png', \
-        '*.jpg'
+        '*.jpg', \
+        '*.psd',\
+        '*.raw',\
+        '*.jpeg',\
+        '*.pdf',
 
     docum_ext = \
         '*.txt', \
         '*.docx', \
+        '*.xml', \
+        '*.doc', \
+        '*.odt', \
+        '*.rtf', \
         '*.pdf'
 
     # photos destination
