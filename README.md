@@ -2,10 +2,10 @@
 
 ### Keep MacOS organized
 
-A Status bar application for sorting files
+A Status bar application under the works for sorting files
 
 #### Description
-A customizable macOS status bar application to sort your files in the computer.
+A customizable macOS status bar application to sort your files.
 
 
 #### Table of Contents
