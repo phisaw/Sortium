@@ -1,6 +1,6 @@
 # Sortium
 
-### Keep the MacOS organized
+### Keep MacOS organized
 
 A Status bar application for sorting files
 
