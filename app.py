@@ -28,6 +28,7 @@ class SortiumApp(object):
         if sender.title == self.config["sort"]:
             func.moveit(func.sortpath, func.docum_ext, func.docum_dest)
             func.moveit(func.sortpath, func.photo_ext, func.photo_dest)
+            func.moveit(func.sortpath, func.music_ext, func.music_dest)
         self.sort_items()
 
     def add_rem_favbar(self, sender):

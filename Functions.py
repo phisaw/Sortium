@@ -13,6 +13,7 @@ class Functions:
     home = expanduser("~")
     sortpath = home + '/Sortium'
 
+#extensions of files
     photo_ext = \
         '*.gif', \
         '*.png', \
@@ -20,7 +21,8 @@ class Functions:
         '*.psd',\
         '*.raw',\
         '*.jpeg',\
-        '*.pdf',
+        '*.pdf',\
+        '*.icns'
 
     docum_ext = \
         '*.txt', \
@@ -29,11 +31,25 @@ class Functions:
         '*.doc', \
         '*.odt', \
         '*.rtf', \
-        '*.pdf'
+        '*.pdf', \
+        '*.xlsx', \
+        '*.csv', \
+        '*.json', \
+        '*.pptx'
 
-    # photos destination
+    music_ext = \
+        '*.wav', \
+        '*.mp3', \
+        '*.mp4', \
+        '*.aac', \
+        '*.wma', \
+        '*.flac', \
+        '*.m4a'
+
+    # files destination
     photo_dest = home + '/Pictures'
     docum_dest = home + '/Documents'
+    music_dest = home + '/Music'
 
     def moveit(self, sortpath, extension, destination):
         all_files = []
