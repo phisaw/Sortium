@@ -18,7 +18,10 @@ A customizable macOS status bar application to sort your files.
 #### Installation
 - coming soon
 #### Usage
-- coming soon
+- Start Sortium
+- Add Sortium to favorites bar in Finder
+- Put images or documents in Sortium folder
+- Click on sort files
 #### Contributing
 - coming soon
 #### Credits
